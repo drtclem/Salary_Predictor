@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Predictor</title>
+</head>
+<body>
+    <h2>Enter Input Features</h2>
+    <form action="/predict" method="post">
+        <label for="feature1">University Ranking:</label><br>
+        <input type="text" name="feature1"><br>
+
+        <label for="feature2">Interships Completed:</label><br>
+        <input type="text" name="feature2"><br>
+
+        <label for="feature3">Certifications:</label><br>
+        <input type="text" name="feature3"><br>
+
+        <label for="feature4">Job Offers:</label><br>
+        <input type="text" name="feature4"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
